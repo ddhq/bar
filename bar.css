@@ -1,0 +1,172 @@
+body,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.icon-baraaa {
+	width: 22px;
+	position: relative;
+	top: 5px;
+	left: 194px;
+	transition: 0.5s;
+	display: inline-block;
+}
+
+.icon-baraaa:hover {
+	cursor: pointer;
+}
+
+.icon-baraaa-img {
+	border-bottom: 3px solid #fff;
+	height: 4px;
+}
+
+
+/*右侧实际信息样式*/
+
+.sbright {
+	float: left;
+	margin-top: 50px;
+	margin-left: 194px;
+	padding: 5px;
+	overflow: hidden;
+	position: relative;
+	border: 2px solid #aaa;
+}
+
+
+/*侧边栏信息样式*/
+
+.sidebarNavDiv {
+	float: left;
+	min-width: 194px;
+	width: 194px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: fixed;
+	background: #393939;
+}
+
+.sidebarNav a {
+	color: #fff;
+	padding-left: 26px;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+.sidebarNav a:hover {
+	text-decoration: none;
+}
+
+.sidebarNav li {
+	display: inline-block;
+	width: 100%;
+	min-height: 50px;
+	line-height: 50px;
+	position: relative;
+	font-size: 14px;
+	border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+}
+
+.sidebarNav li.active {
+	border-bottom: #1b1b1b;
+	border-top-color: rgb(238, 238, 238);
+	border-right-color: rgb(238, 238, 238);
+	border-bottom-color: rgb(221, 221, 221);
+	border-left-color: rgb(238, 238, 238);
+	background: #1b1b1b;
+}
+
+.sidebarNav li.active a {
+	color: #0af;
+}
+
+.sidebarNav li a:link {
+	text-decoration: none;
+}
+
+.linkNav {
+	position: relative;
+	left: 20px;
+	font-size: 24px;
+}
+
+.slideUpDown {
+	background: #2f2f2f;
+}
+
+.slideUpDown a {
+	padding-left: 52px;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+.slideUpDowntitle span {
+	color: #fff;
+	margin-left: 26px;
+	cursor: pointer;
+}
+
+.sidebarNav .downPull {
+	padding-left: 0px;
+}
+
+.showHide-icon {
+	display: inline-block;
+	font-size: 24px;
+	color: #fff;
+	position: relative;
+	cursor: pointer;
+	transition: 0.5s;
+	top: 5px;
+	margin-right: 20px;
+}
+
+.showHide-icon:hover {
+	color: #337ab7;
+}
+
+.headui {
+	width: 100%;
+	background: #283442;
+	position: fixed;
+	z-index: 1000;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	min-height: 40px;
+}
+
+
+/**/
+
+.username {
+	color: #fff;
+	display: inline-block;
+	position: absolute;
+	right: 85px;
+	top: 15px;
+	cursor: pointer;
+}
+
+.usernamegroup {
+	display: none;
+	border: 1px solid #aaa;
+	background-color: #F7EED6;
+	max-width: 150px;
+	position: absolute;
+	right: 55px;
+	top: 50px;
+	padding: 0 20px;
+}
+
+.usernamegroup p {
+	cursor: pointer;
+}
+
+/*禁止调整textarea大小*/
+textarea {
+	resize: none;
+}

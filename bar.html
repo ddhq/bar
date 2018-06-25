@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>云问答平台</title>
+		<link rel="stylesheet" href="bar.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-table/css/bootstrap-table.min.css">
+	</head>
+
+	<body>
+		<div class='headui'>
+			<div class='icon-baraaa' id='balabala' title='隐藏左侧导航'>
+				<div class='icon-baraaa-img'></div>
+				<div class='icon-baraaa-img'></div>
+				<div class='icon-baraaa-img'></div>
+			</div>
+			<div class='username'>请登录</div>
+			<div class='usernamegroup'>
+				<p>u2001</p>
+				<p>u2002</p>
+				<p>u2003</p>
+			</div>
+		</div>
+
+		<div class="sidebarNavDiv">
+			<ul class="sidebarNav">
+				<li class="downPull">
+					<div class="slideUpDowntitle">
+						<span style="box-sizing: border-box;">云问答平台</span>
+						<span class="linkNav">-</span>
+					</div>
+					<div class="slideUpDown" status="0">
+						<ul>
+							<li>
+								<a id="hall" href="#">问答大厅</a>
+							</li>
+							<li>
+								<a id="myq" href="#">我的提问</a>
+							</li>
+							<li>
+								<a id="mya" href="#">我的回答</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class='sbright'>
+			<div>
+				<div id='nav'>
+					<button class="btn btn-info" id='newq'>发布新问题</button>
+					<button class="btn btn-info" id='req'>回复</button>
+					<button class="btn btn-info" id='pay'>确认最佳答案</button>
+					<button class="btn btn-info" id='delq'>删除问题</button>
+					<button class="btn btn-info" id='dela'>删除回复</button>
+				</div>
+				<table id='question_table'></table>
+			</div>
+
+			<div id="a_div">
+				<table id="reply_table"></table>
+			</div>
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title">发布新问题</h4>
+						</div>
+						<div class="modal-body">
+							<div class='row'>
+								<div class="col-md-2" style='top:20px;left:20px;'><label>赏金：</label></div>
+								<div class="col-md-9 form-group">
+									<input class="form-control" id="price" rows="3"></input>
+								</div>
+							</div>
+							<div class='row'>
+								<div class="col-md-2" style='top:20px;left:20px;'><label>问题：</label></div>
+								<div class="col-md-9 form-group">
+									<textarea class="form-control" id="txtDes" rows="3" placeholder="输入想要发布的问题"></textarea>
+								</div>
+							</div>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary" id="btnOk">发布新问题</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal end -->
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title">回复</h4>
+						</div>
+						<div class="modal-body">
+							<div class='row'>
+								<div class="col-md-2" style='top:20px;left:20px;'><label>回复：</label></div>
+								<div class="col-md-9 form-group">
+									<textarea class="form-control" id="txtRep" rows="3" placeholder="输入想要回复的内容"></textarea>
+								</div>
+							</div>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary" id="btnOk2">回复</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal end -->
+
+			<!--model -->
+			<div id="modal-confirm" class="modal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+							<h5 class="modal-title"><i class="fa fa-exclamation-circle"></i> [Title]</h5>
+						</div>
+						<div class="modal-body">
+							<p>[Message]</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" id="ok" class="btn btn-info ok" data-dismiss="modal">[BtnOk]</button>
+							<button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--model end-->
+
+		</div>
+	</body>
+
+</html>
+<script src='jquery-2.1.0.min.js'></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src='bootstrap-table/js/bootstrap-table.min.js'></script>
+
+<script src="lib/bignumber.js"></script>
+<script type="text/javascript" src="lib/cloudFun-InTheCloud.js"></script>
+<script type="text/javascript" src="lib/customJS-InTheCloud.js"></script>
+<script type="text/javascript" src="lib/db.js"></script>
+<script type="text/javascript" src="lib/localAPI-InTheLocal.js"></script>
+<!--引入，但是不要直接在html调用cloudFun-InTheCloud.js和customJS-InTheCloud.js-->
+
+<script src='bar.js'></script>
